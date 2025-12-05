@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hastane Randevu Formu</title>
+</head>
+<body>
+
+    <form action="/randevu-onay" method="post">
+        
+        <label for="bolum">Bölüm Seçimi:</label>
+        <select id="bolum" name="bolum" required>
+            <option value="">Lütfen bir bölüm seçiniz</option>
+            <optgroup label="Dahiliye">
+                <option value="kardiyo">Kardiyoloji</option>
+                <option value="nefro">Nefroloji</option>
+            </optgroup>
+            <optgroup label="Cerrahi">
+                <option value="genel">Genel Cerrahi</option>
+                <option value="orto">Ortopedi</option>
+            </optgroup>
+            <option value="cocuk">Çocuk Sağlığı ve Hastalıkları</option>
+            <option value="goz">Göz Hastalıkları</option>
+        </select>
+        <br><br>
+
+        <label for="doktor">Doktor Seçimi:</label>
+        <select id="doktor" name="doktor" required>
+            <option value="">Lütfen doktor seçiniz</option>
+            <option value="dr-yildiz">Uzm. Dr. Ayşe Yıldız</option>
+            <option value="dr-kaya">Prof. Dr. Mehmet Kaya</option>
+            <option value="dr-demir">Dr. Aslı Demir</option>
+            <option value="dr-ozer">Doç. Dr. Can Özer</option>
+        </select>
+        <br><br>
+        
+        <label for="tarih">Randevu Tarihi:</label>
+        <input type="date" id="tarih" name="tarih" required>
+        <br><br>
+        
+        <label for="sikayet">Şikayetiniz:</label>
+        <textarea id="sikayet" name="sikayet" rows="5" cols="40" required></textarea>
+        <br><br>
+        
+        <button type="submit">Randevuyu Onayla</button>
+
+    </form>
+
+</body>
+</html>
