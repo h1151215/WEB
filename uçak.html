@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Uçuş Arama / Rezervasyon Formu</title>
+</head>
+<body>
+    <h2>Uçuş Arama Formu</h2>
+    <form action="/submit-ucus-form" method="get">
+        
+        <fieldset>
+            <legend>Uçuş Tipi</legend>
+            
+            <input type="radio" id="gidis-donus" name="ucus-tipi" value="gidis-donus" checked>
+            <label for="gidis-donus">Gidiş-Dönüş</label><br>
+            
+            <input type="radio" id="tek-yon" name="ucus-tipi" value="tek-yon">
+            <label for="tek-yon">Tek Yön</label>
+        </fieldset>
+        
+        <br>
+
+        <fieldset>
+            <legend>Güzergah ve Yolcu Bilgileri</legend>
+            
+            <label for="kalkis">Kalkış Yeri:</label>
+            <input type="text" id="kalkis" name="kalkis-yeri" required><br><br>
+
+            <label for="varis">Varış Yeri:</label>
+            <input type="text" id="varis" name="varis-yeri" required><br><br>
+            
+            <label for="yolcu-sayisi">Yolcu Sayısı (select):</label>
+            <select id="yolcu-sayisi" name="yolcu-sayisi" required>
+                <option value="1">1 Yolcu</option>
+                <option value="2">2 Yolcu</option>
+                <option value="3">3 Yolcu</option>
+                <option value="4">4 Yolcu</option>
+                <option value="5+">5+ Yolcu</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Tarih Seçimi</legend>
+            
+            <label for="gidis-tarihi">Gidiş Tarihi (input[type=date]):</label>
+            <input type="date" id="gidis-tarihi" name="gidis-tarihi" required><br><br>
+            
+            <label for="donus-tarihi">Dönüş Tarihi (input[type=date]):</label>
+            <input type="date" id="donus-tarihi" name="donus-tarihi">
+            <small>(Gidiş-Dönüş seçilmediyse boş bırakılabilir)</small>
+        </fieldset>
+
+        <br>
+        
+        <button type="submit">Uçuş Ara</button>
+        
+    </form>
+</body>
+</html>
