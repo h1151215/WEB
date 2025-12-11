@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Otomotiv Servis Talep Formu</title>
+</head>
+<body>
+    <h2>Araç Servis Talep Formu</h2>
+    <form action="/submit-servis-form" method="post">
+        
+        <fieldset>
+            <legend>Araç Sahibi ve Temel Bilgiler</legend>
+            
+            <label for="ad-soyad">Ad Soyad:</label>
+            <input type="text" id="ad-soyad" name="ad-soyad" required><br><br>
+            
+            <label for="model">Araç Modeli:</label>
+            <select id="model" name="arac-modeli" required>
+                <option value="" disabled selected>Model Seçiniz</option>
+                <option value="vw-golf">Volkswagen Golf</option>
+                <option value="vw-passat">Volkswagen Passat</option>
+                <option value="ren-clio">Renault Clio</option>
+                <option value="ren-megane">Renault Megane</option>
+                <option value="fiat-egea">Fiat Egea</option>
+                <option value="ford-focus">Ford Focus</option>
+                <option value="toyota-corolla">Toyota Corolla</option>
+                <option value="honda-civic">Honda Civic</option>
+            </select><br><br>
+            
+            <label for="km">Kilometre :</label>
+            <input type="number" id="km" name="kilometre" min="0" required><br><br>
+
+            <label for="talep-tarihi">Talep Edilen Servis Tarihi :</label>
+            <input type="date" id="talep-tarihi" name="servis-tarihi" required>
+        </fieldset>
+
+        <br>
+        
+        <fieldset>
+            <legend>Servis Sorun Açıklaması</legend>
+            <label for="sorun">Yaşanan Sorunun Detayı:</label><br>
+            <textarea id="sorun" name="sorun-detayi" rows="5" cols="60" placeholder="Aracınızdaki sorunu veya istediğiniz bakım türünü detaylıca belirtiniz..."></textarea>
+        </fieldset>
+
+        <br>
+        
+        <button type="submit">Servis Talebi Oluştur</button>
+        
+    </form>
+</body>
+</html>
