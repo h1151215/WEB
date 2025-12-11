@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Restoran Sipariş / Rezervasyon Formu</title>
+</head>
+<body>
+    <h2>Online Sipariş ve Rezervasyon Formu</h2>
+    <form action="/submit-restoran-form" method="post">
+        
+        <fieldset>
+            <legend>Yemek Seçimi</legend>
+            <label for="ana-yemek">Menüden Seçim:</label>
+            <select id="ana-yemek" name="yemek-secimi" required>
+                <optgroup label="Çorbalar">
+                    <option value="mercimek">Mercimek Çorbası</option>
+                    <option value="ezogelin">Ezogelin Çorbası</option>
+                </optgroup>
+                <optgroup label="Ana Yemekler">
+                    <option value="kofte">Izgara Köfte</option>
+                    <option value="tavuk">Fırında Tavuk</option>
+                    <option value="karniyarik">Karnıyarık</option>
+                </optgroup>
+                <optgroup label="Tatlılar">
+                    <option value="sutlac">Sütlaç</option>
+                    <option value="kunefe">Künefe</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Ekstralar (Eklemek İstedikleriniz)</legend>
+            <input type="checkbox" id="salata" name="ekstra" value="salata">
+            <label for="salata"> Mevsim Salata</label><br>
+            
+            <input type="checkbox" id="patates" name="ekstra" value="patates">
+            <label for="patates"> Baharatlı Patates</label><br>
+            
+            <input type="checkbox" id="icecek" name="ekstra" value="icecek">
+            <label for="icecek"> İçecek</label>
+        </fieldset>
+
+        <br>
+        
+        <fieldset>
+            <legend>Rezervasyon Bilgileri / Teslimat Saati</legend>
+            <label for="rez-saat">Teslimat / Rezervasyon Saati:</label>
+            <input type="time" id="rez-saat" name="rezervasyon-saati" value="19:00">
+        </fieldset>
+        
+        <br>
+
+        <fieldset>
+            <legend>Özel İstekler</legend>
+            <label for="ozel-istek">Alerjileriniz veya Notlarınız:</label><br>
+            <textarea id="ozel-istek" name="ozel-istek" rows="4" cols="50" placeholder="Özel isteklerinizi buraya yazınız..."></textarea>
+        </fieldset>
+
+        <br>
+        
+        <button type="submit">Siparişi Tamamla / Rezervasyon Yap</button>
+
+    </form>
+</body>
+</html>
