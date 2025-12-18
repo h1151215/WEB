@@ -1,51 +1,81 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Otomotiv Servis Talep Formu</title>
+    <style>
+        /* CSS Kodları */
+        .makale { 
+            width: 618px; 
+            margin: 50px auto; 
+            font-family: sans-serif;
+        }
+
+        h2 { 
+            font-size: 2.5em; 
+            font-family: Georgia, serif; 
+            text-shadow: 1px 1px 1px gainsboro; 
+            letter-spacing: 0.1em; 
+            color: rgb(231, 62, 46); 
+            margin-bottom: 5px;
+        }
+
+        h2 span { 
+            display: block; 
+            margin-top: 0.5em; 
+            font-family: Verdana, sans-serif; 
+            font-size: 0.6em; 
+            font-weight: normal; 
+            letter-spacing: 0em; 
+            text-shadow: none; 
+        }
+
+        .yazar_tarih { 
+            font-family: Georgia, serif; 
+            color: dimgray; 
+            font-size: 0.85em; 
+            font-style: italic; 
+            letter-spacing: 0.25em; 
+            padding-bottom: 0.5em; 
+            border-bottom: 1px solid gainsboro; 
+            margin-bottom: 15px;
+        }
+
+        .icerik p { 
+            font-family: Verdana, sans-serif; 
+            line-height: 1.5em; 
+            color: black; 
+        }
+
+        .icerik p:first-child { 
+            font-size: 1.25em; 
+            font-family: Georgia, serif; 
+            font-style: italic; 
+            letter-spacing: 0.1em; 
+        }
+
+        .icerik p:first-child:first-line { 
+            font-weight: bold; 
+        }
+    </style>
 </head>
 <body>
-    <h2>Araç Servis Talep Formu</h2>
-    <form action="/submit-servis-form" method="post">
-        
-        <fieldset>
-            <legend>Araç Sahibi ve Temel Bilgiler</legend>
-            
-            <label for="ad-soyad">Ad Soyad:</label>
-            <input type="text" id="ad-soyad" name="ad-soyad" required><br><br>
-            
-            <label for="model">Araç Modeli:</label>
-            <select id="model" name="arac-modeli" required>
-                <option value="" disabled selected>Model Seçiniz</option>
-                <option value="vw-golf">Volkswagen Golf</option>
-                <option value="vw-passat">Volkswagen Passat</option>
-                <option value="ren-clio">Renault Clio</option>
-                <option value="ren-megane">Renault Megane</option>
-                <option value="fiat-egea">Fiat Egea</option>
-                <option value="ford-focus">Ford Focus</option>
-                <option value="toyota-corolla">Toyota Corolla</option>
-                <option value="honda-civic">Honda Civic</option>
-            </select><br><br>
-            
-            <label for="km">Kilometre :</label>
-            <input type="number" id="km" name="kilometre" min="0" required><br><br>
 
-            <label for="talep-tarihi">Talep Edilen Servis Tarihi :</label>
-            <input type="date" id="talep-tarihi" name="servis-tarihi" required>
-        </fieldset>
+    <div class="makale">
+        <h2>Bugün siz de <span>yazılıma başlayarak hayatınızı değiştirin.</span></h2>
+        
+        <div class="yazar_tarih">Konu Yazarı: Halil İbrahim Katırcı</div>
+        
+        <div class="icerik">
+            <p>Günümüzde yazılım, tüm dünyayı yakından ilgilendiren bir kavramdır.</p>
+            
+            <p>Hiç düşündünüz mü, "hayatımızdan yazılımı çıkarsaydık ne olurdu?". 
+            Sanırım hareket kabiliyetimiz kısıtlanır, yaşam kalitemiz düşer, 
+            iletişim kurmada problemler yaşar ve daha birçok konuda sıkıntılı 
+            bir hayatımız olurdu.</p>
+            
+            <div class="yazar_tarih">Oluşturma: 18 Aralık 2025 Perşembe</div>
+        </div>
+    </div>
 
-        <br>
-        
-        <fieldset>
-            <legend>Servis Sorun Açıklaması</legend>
-            <label for="sorun">Yaşanan Sorunun Detayı:</label><br>
-            <textarea id="sorun" name="sorun-detayi" rows="5" cols="60" placeholder="Aracınızdaki sorunu veya istediğiniz bakım türünü detaylıca belirtiniz..."></textarea>
-        </fieldset>
-
-        <br>
-        
-        <button type="submit">Servis Talebi Oluştur</button>
-        
-    </form>
 </body>
 </html>
