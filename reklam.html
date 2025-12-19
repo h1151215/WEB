@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div {
+            text-align: center;
+        }
+
+        #kucukReklam,
+        #buyukReklam {
+            display: none;
+        }
+
+        @media screen and (max-width: 749px) {
+            #kucukReklam {
+                display: inline;
+            }
+        }
+
+        @media screen and (min-width: 750px) {
+            #buyukReklam {
+                display: inline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reklamAlani">
+        <img src="reklam1.jpg" id="kucukReklam">
+        <img src="reklam2.jpg" id="buyukReklam">
+    </div>
+</body>
+</html>
