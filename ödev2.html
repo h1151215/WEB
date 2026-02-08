@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Foto Galerisi</title>
+</head>
+<body style="text-align:center;">
+
+<img id="galeri" src="foto1.jpg" width="300">
+
+<br><br>
+
+<button onclick="foto1()">Foto 1</button>
+<button onclick="foto2()">Foto 2</button>
+<button onclick="foto3()">Foto 3</button>
+
+<script>
+function foto1() {
+document.getElementById("galeri").src = "foto1.jpg";
+}
+
+function foto2() {
+document.getElementById("galeri").src = "foto2.jpg";
+}
+
+function foto3() {
+document.getElementById("galeri").src = "foto3.jpg";
+}
+</script>
+
+</body>
+</html>
