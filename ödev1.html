@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>JS Ödev</title>
+</head>
+<body>
+
+<h3>Kullanıcı Adı</h3>
+<input type="text" name="kullaniciAdi" placeholder="Adını yaz">
+
+<br><br>
+
+<div>Birinci yazı</div>
+<div>İkinci yazı</div>
+<div>Üçüncü yazı</div>
+
+<script>
+document.getElementsByName("kullaniciAdi")[0].style.backgroundColor = "#C04000 ";
+document.getElementsByName("kullaniciAdi")[0].style.color = "white";
+
+document.getElementsByTagName("div")[2].style.borderBottomStyle = "solid";
+document.getElementsByTagName("div")[2].style.borderBottomWidth = "2px";
+</script>
+
+</body>
+</html>
