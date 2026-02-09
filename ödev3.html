@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <title>Kenar Yuvarlama</title>
 </head>
-<body style="text-align:center;">
+<body style="text-align:center; margin-top:40px;">
 
-<div id="kutu" style="width:150px; height:150px; background:orange; margin:auto;"></div>
+<div id="kutu" style="width:100px; height:100px; background:orange; margin:auto;"></div>
 
 <br>
 
-<button onclick="yuvarla(0)">0 piksel</button>
-<button onclick="yuvarla(10)">10 piksel</button>
-<button onclick="yuvarla(25)">25 piksel</button>
-<button onclick="yuvarla(50)">50 piksel</button>
+<input type="radio" name="secim" onclick="yuvarla(0)"> 0 piksel<br>
+<input type="radio" name="secim" onclick="yuvarla(10)"> 10 piksel<br>
+<input type="radio" name="secim" onclick="yuvarla(25)"> 25 piksel<br>
+<input type="radio" name="secim" onclick="yuvarla(50)"> 50 piksel
 
 <script>
 function yuvarla(deger) {
