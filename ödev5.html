@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Mesajlaşma</title>
+</head>
+<body style="text-align:center; margin-top:30px;">
+
+<input type="text" id="mesaj" placeholder="Mesajınızı giriniz">
+<button onclick="mesajGonder()">Gönder</button>
+
+<br><br>
+
+<div id="liste"></div>
+
+<script>
+function mesajGonder() {
+let metin = document.getElementById("mesaj").value;
+
+if (metin != "") {
+document.getElementById("liste").innerHTML += "<p>" + metin + "</p>";
+document.getElementById("mesaj").value = "";
+}
+}
+</script>
+
+</body>
+</html>
