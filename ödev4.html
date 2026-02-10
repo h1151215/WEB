@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Kare Alma</title>
+</head>
+<body style="text-align:center; margin-top:40px;">
+
+<form>
+<input type="text" placeholder="Sayı giriniz" onkeyup="kareAl(this)">
+<p id="sonuc"></p>
+</form>
+
+<script>
+function kareAl(a) {
+sayi = a.value;
+sonuc = sayi * sayi;
+document.getElementById("sonuc").innerHTML = sonuc;
+}
+</script>
+
+</body>
+</html>
