@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>JS Ödev</title>
+    <meta charset="UTF-8">
+    <title>Görüntü Modu</title>
 </head>
 <body>
 
-<h3>Kullanıcı Adı</h3>
-<input type="text" name="kullaniciAdi" placeholder="Adını yaz">
+    <div>
+        <p>Web sayfasını <b>koyu</b> modda kullanmak ister misiniz?</p>
+        
+        <input type="radio" name="mod" id="evet"> Evet <br>
+        <input type="radio" name="mod" id="hayir"> Hayır <br><br>
+        
+        <button onclick="modAyarla()">Mod Ayarla</button>
+    </div>
 
-<br><br>
-
-<div>Birinci yazı</div>
-<div>İkinci yazı</div>
-<div>Üçüncü yazı</div>
-
-<script>
-document.getElementsByName("kullaniciAdi")[0].style.backgroundColor = "#C04000 ";
-document.getElementsByName("kullaniciAdi")[0].style.color = "white";
-
-document.getElementsByTagName("div")[2].style.borderBottomStyle = "solid";
-document.getElementsByTagName("div")[2].style.borderBottomWidth = "2px";
-</script>
+    <script>
+        function modAyarla() {
+            if (document.getElementById("evet").checked) {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+            } 
+            else if (document.getElementById("hayir").checked) {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+            }
+        }
+    </script>
 
 </body>
 </html>
