@@ -1,0 +1,24 @@
+<div style="background-color: lightblue; padding: 10px; width: 120px; text-align: center;">
+
+    <button onclick="arttir()">Sayıyı Artır</button>
+    
+    <h1 id="sayac">15</h1>
+    
+    <button onclick="azalt()">Sayıyı Azalt</button>
+
+</div>
+
+<script>
+    // 3. Adım: Sayıyı arttıran ve azaltan fonksiyonlar
+    let sayi = 15;
+
+    function arttir() {
+        sayi++;
+        document.getElementById("sayac").innerHTML = sayi;
+    }
+
+    function azalt() {
+        sayi--;
+        document.getElementById("sayac").innerHTML = sayi;
+    }
+</script>
