@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; padding-top: 100px; background-color: #f0f0f0; }
+        .sozluk-konteynir {
+            background-color: orange;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        input { padding: 8px; border: 1px solid #ccc; border-radius: 3px; width: 150px; }
+        button { padding: 8px 15px; cursor: pointer; background: #eee; border: 1px solid #ccc; border-radius: 3px; font-weight: bold; }
+        #sonuc { margin-top: 20px; font-size: 20px; font-weight: bold; min-height: 24px; }
+    </style>
+</head>
+<body>
+
+    <div class="sozluk-konteynir">
+        <input type="text" id="kelime" placeholder="İngilizce Kelime">
+        <button onclick="cevir()">Çevir</button>
+        <div id="sonuc">Kelimenin Türkçe Karşılığı</div>
+    </div>
+
+    <script>
+        function cevir() {
+            var ingilizce = document.getElementById("kelime").value.toLowerCase();
+            var sonucAlani = document.getElementById("sonuc");
+
+            if (ingilizce == "computer") {
+                sonucAlani.innerHTML = "bilgisayar";
+            } else if (ingilizce == "snow") {
+                sonucAlani.innerHTML = "kar";
+            } else if (ingilizce == "car") {
+                sonucAlani.innerHTML = "araba";
+            } else if (ingilizce == "") {
+                sonucAlani.innerHTML = "Lütfen kelime girin!";
+            } else {
+                sonucAlani.innerHTML = "Kelime bulunamadı.";
+            }
+        }
+    </script>
+
+</body>
+</html>
