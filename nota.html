@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3 id="potre"></h3>
+
+<button onclick="melodiBaslat()">Melodi Başlat</button>
+<button onclick="melodiDurdur()">Melodi Durdur</button>
+
+<script>
+var notalar = ["fa","la","do","si","sol","re","mi"];
+var zaman = null;
+
+function melodiBaslat() {
+    if (zaman != null) return;
+
+    document.getElementById("potre").innerHTML = "";
+
+    zaman = setInterval(function() {
+        var rastgele = Math.floor(Math.random() * notalar.length);
+        document.getElementById("potre").innerHTML += notalar[rastgele] + "_";
+    }, 2000);
+}
+
+function melodiDurdur() {
+    clearInterval(zaman);
+    zaman = null;
+}
+</script>
+
+</body>
+</html>
