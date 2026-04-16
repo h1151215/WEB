@@ -1,0 +1,32 @@
+<head>
+    <title>JavaScript Veri Alma</title>
+</head>
+<body>
+    <div>
+        <label for="adInput">Kullanıcı adı:</label>
+        <input type="text" id="adInput" placeholder="ismini yaza">
+        <br><br>
+        <label for="yasInput">Yaş:</label>
+        <input type="text" id="yasInput" placeholder="kaç yıldır dünyadasın">
+        <br><br>
+        <button onclick="mesajGoster()">çıktı al</button>
+    </div>
+    <p id="sonuc"></p>
+    <script>
+        function mesajGoster() {
+            let ad = document.getElementById("adInput").value;
+            let yasHamVeri = document.getElementById("yasInput").value;
+
+      
+            let yas = Number(yasHamVeri);
+            if (isNaN(yas) || yasHamVeri === "") {
+                document.getElementById("sonuc").innerHTML = "Lütfen geçerli bir yaş giriniz.";
+                return;
+            }
+            let mesaj = "Merhaba " + ad + ", yaşınız " + yas;
+            document.getElementById("sonuc").innerHTML = mesaj;
+        }
+    </script>
+
+</body>
+</html>

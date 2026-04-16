@@ -1,0 +1,30 @@
+<head>
+    <title>Sınav Uygulaması</title>
+</head>
+<body>
+
+    <div>
+        Sayı 1: <input type="number" id="s1"> <br><br>
+        Sayı 2: <input type="number" id="s2"> <br><br>
+        <button onclick="ekranaBas()">Topla</button>
+    </div>
+
+    <h3 id="cikti"></h3>
+
+    <script>
+        const topla = (a, b) => {
+            return a + b;
+        };
+
+        const ekranaBas = () => {
+            const num1 = Number(document.getElementById("s1").value);
+            const num2 = Number(document.getElementById("s2").value);
+            
+            const sonuc = topla(num1, num2);
+            
+            document.getElementById("cikti").innerHTML = "Toplam: " + sonuc;
+        };
+    </script>
+
+</body>
+</html>
