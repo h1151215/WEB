@@ -1,10 +1,29 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "ViewModel Ödevi";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>Kullanıcı Kayıt Formu</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="KayitFormu.Ad"></label>
+        <input asp-for="KayitFormu.Ad" class="form-control" />
+        <span asp-validation-for="KayitFormu.Ad" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="KayitFormu.Email"></label>
+        <input asp-for="KayitFormu.Email" class="form-control" />
+        <span asp-validation-for="KayitFormu.Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="KayitFormu.Sifre"></label>
+        <input asp-for="KayitFormu.Sifre" class="form-control" />
+        <span asp-validation-for="KayitFormu.Sifre" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

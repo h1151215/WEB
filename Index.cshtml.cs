@@ -1,20 +1,27 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using ödev_R6.Models; 
 
-namespace WebApplication1.Pages
+namespace ödev_R6.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        
+        [BindProperty]
+        public UyeKayitViewModel KayitFormu { get; set; }
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public void OnGet() { }
+
+        public IActionResult OnPost()
         {
-            _logger = logger;
-        }
+            if (!ModelState.IsValid)
+            {
+                
+                return Page();
+            }
 
-        public void OnGet()
-        {
-
+            
+            return RedirectToPage("Privacy");
         }
     }
 }
