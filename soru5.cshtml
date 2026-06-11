@@ -1,0 +1,15 @@
+﻿@page
+@model web_sınav.Pages.Soru5Model
+
+<h1>5. Soru</h1>
+<form method="post">
+    1. Sayı: <input type="number" asp-for="s1" /> <br />
+    2. Sayı: <input type="number" asp-for="s2" /> <br />
+    3. Sayı: <input type="number" asp-for="s3" /> <br />
+    <button type="submit">Bul</button>
+</form>
+
+@if (Model.b == true)
+{
+    <p>En büyük sayı: @Model.büyük</p>
+}
