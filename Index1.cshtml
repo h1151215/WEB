@@ -1,35 +1,22 @@
 ﻿@page
-@model web_sınav.Pages.Index1Model
+@model web_sınav.Pages.Soru2Model
 @{
-    ViewData["Title"] = "1. Soru";
+    ViewData["Title"] = "2. Soru";
 }
 
-<div class="container mt-5">
-    <div class="card shadow p-4 w-50 mx-auto">
-        <h2 class="text-center mb-4">Sayı Hesaplayıcı (Soru 1)</h2>
+<h2>2. Soru: Karenin Alanı ve Çevresi</h2>
 
-        <form method="post">
-            <div class="mb-3">
-                <label class="form-label">Birinci Sayıyı Girin:</label>
-                <input type="number" step="any" asp-for="Sayi1" class="form-control" required />
-            </div>
+<form method="post">
+    <label>Karenin bir kenar uzunluğunu girin:</label>
+    <br />
+    <input type="number" step="any" asp-for="Kenar" required />
+    <br /><br />
+    <button type="submit">Hesapla</button>
+</form>
 
-            <div class="mb-3">
-                <label class="form-label">İkinci Sayıyı Girin:</label>
-                <input type="number" step="any" asp-for="Sayi2" class="form-control" required />
-            </div>
-
-            <button type="submit" class="btn btn-primary w-100">Hesapla</button>
-        </form>
-
-        @if (Model.Toplam != null)
-        {
-            <div class="mt-4 alert alert-success text-center">
-                <h5>Sonuçlar</h5>
-                <hr />
-                <p><strong>Toplam:</strong> @Model.Toplam</p>
-                <p><strong>Çarpım:</strong> @Model.Carpim</p>
-            </div>
-        }
-    </div>
-</div>
+@if (Model.Alan != null)
+{
+    <br />
+    <p>Karenin Alanı: @Model.Alan</p>
+    <p>Karenin Çevresi: @Model.Cevre</p>
+}

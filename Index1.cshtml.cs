@@ -1,23 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace web_sÄ±nav.Pages
+namespace web_sýnav.Pages
 {
-    public class Index1Model : PageModel
+    public class Soru2Model : PageModel
     {
         [BindProperty]
-        public double Sayi1 { get; set; }
+        public double Kenar { get; set; }
 
-        [BindProperty]
-        public double Sayi2 { get; set; }
-
-        public double? Toplam { get; set; }
-        public double? Carpim { get; set; }
+        public double? Alan { get; set; }
+        public double? Cevre { get; set; }
 
         public void OnPost()
         {
-            Toplam = Sayi1 + Sayi2;
-            Carpim = Sayi1 * Sayi2;
+         
+            Alan = Kenar * Kenar;
+
+            
+            Cevre = 4 * Kenar;
         }
     }
 }
