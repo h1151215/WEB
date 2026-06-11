@@ -1,0 +1,21 @@
+﻿@page
+@model web_sınav.Pages.Soru3Model
+@{
+    ViewData["Title"] = "3. Soru";
+}
+
+<h2>3. Soru: Tek mi Çift mi?</h2>
+
+<form method="post">
+    <label>Bir tam sayı giriniz:</label>
+    <br />
+    <input type="number" asp-for="Sayi" required />
+    <br /><br />
+    <button type="submit">Kontrol Et</button>
+</form>
+
+@if (Model.Sonuc != null)
+{
+    <br />
+    <p><strong>Sonuç:</strong> @Model.Sonuc</p>
+}
