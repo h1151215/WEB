@@ -1,0 +1,13 @@
+﻿@page
+@model web_sınav.Pages.Soru4Model
+
+<h1>4. Soru</h1>
+<form method="post">
+    Yaşınız: <input type="number" asp-for="yas" /> <br />
+    <button type="submit">Kontrol</button>
+</form>
+
+@if (Model.yazi != null)
+{
+    <p>@Model.yazi</p>
+}
