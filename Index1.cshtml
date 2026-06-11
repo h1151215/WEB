@@ -1,0 +1,35 @@
+﻿@page
+@model web_sınav.Pages.Index1Model
+@{
+    ViewData["Title"] = "1. Soru";
+}
+
+<div class="container mt-5">
+    <div class="card shadow p-4 w-50 mx-auto">
+        <h2 class="text-center mb-4">Sayı Hesaplayıcı (Soru 1)</h2>
+
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label">Birinci Sayıyı Girin:</label>
+                <input type="number" step="any" asp-for="Sayi1" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">İkinci Sayıyı Girin:</label>
+                <input type="number" step="any" asp-for="Sayi2" class="form-control" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Hesapla</button>
+        </form>
+
+        @if (Model.Toplam != null)
+        {
+            <div class="mt-4 alert alert-success text-center">
+                <h5>Sonuçlar</h5>
+                <hr />
+                <p><strong>Toplam:</strong> @Model.Toplam</p>
+                <p><strong>Çarpım:</strong> @Model.Carpim</p>
+            </div>
+        }
+    </div>
+</div>
